@@ -11,20 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20150415033956) do
-
-  create_table "stories", force: true do |t|
-    t.string   "title"
-    t.text     "description"
-
-ActiveRecord::Schema.define(version: 20150415031853) do
 
   create_table "chapters", force: true do |t|
     t.string   "title"
     t.integer  "rating"
     t.text     "youtubelink"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
+  create_table "stories", force: true do |t|
+    t.string   "title"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
